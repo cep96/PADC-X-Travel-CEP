@@ -37,6 +37,21 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+        setUpSwipeRefresh()
+        setUpRecyclerView()
+
+        requestData()
+
+    }
+
+    private fun setUpSwipeRefresh(){
+        swipeRefreshLayout.setOnRefreshListener {
+            requestData()
+        }
+    }
+
+    private fun setUpRecyclerView() {
         // for country list
         mCountryAdapter = CountryListAdapter()
 
@@ -48,8 +63,6 @@ class HomeFragment : Fragment() {
 
         rcPopularTours.adapter = mPopularToursAdapter
         rcPopularTours.layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-
-        requestData()
 
     }
 

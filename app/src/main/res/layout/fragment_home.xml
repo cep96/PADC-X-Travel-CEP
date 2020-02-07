@@ -15,57 +15,58 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <org.mmtextview.components.MMTextView
-                    android:id="@+id/tvFindBestTour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:layout_marginTop="@dimen/margin_medium_2"
-                    android:text="@string/txt_lbl_find_best_tour"
-                    android:textColor="@android:color/black"
-                    android:textSize="@dimen/text_regular_3x"
-                    android:textStyle="bold" />
-
-                <org.mmtextview.components.MMTextView
-                    android:id="@+id/tvCountry"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:text="@string/txt_lbl_country"
-                    android:textSize="@dimen/text_regular_2x" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcCountry"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/margin_medium"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    tools:listitem="@layout/item_country" />
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    >
 
-                <org.mmtextview.components.MMTextView
-                    android:id="@+id/tvPopularTours"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/margin_medium_2"
-                    android:text="@string/txt_lbl_popular_tours"
-                    android:textSize="@dimen/text_regular_2x"
-                    android:textStyle="bold" />
+                    <org.mmtextview.components.MMTextView
+                        android:id="@+id/tvFindBestTour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium_2"
+                        android:text="@string/txt_lbl_find_best_tour"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:textStyle="bold" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/rcPopularTours"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="@dimen/margin_medium"
-                    tools:listitem="@layout/item_popular_tours" />
+                    <org.mmtextview.components.MMTextView
+                        android:id="@+id/tvCountry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:text="@string/txt_lbl_country"
+                        android:textSize="@dimen/text_regular_2x" />
 
-            </LinearLayout>
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_medium"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_country" />
+
+                    <org.mmtextview.components.MMTextView
+                        android:id="@+id/tvPopularTours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_medium_2"
+                        android:text="@string/txt_lbl_popular_tours"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:textStyle="bold" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcPopularTours"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/margin_medium"
+                        tools:listitem="@layout/item_popular_tours" />
+
+                </LinearLayout>
 
         </ScrollView>
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
