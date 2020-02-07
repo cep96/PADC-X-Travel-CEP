@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium"
+    app:cardCornerRadius="@dimen/margin_medium">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <ImageView
+            android:id="@+id/ivPopularTour"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/maldive_picture" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPopularTour"
+            android:text="Thailand"
+            android:paddingStart="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/margin_medium"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvPackage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPopularTour"
+            android:layout_below="@id/tvCountryName"
+            android:layout_toStartOf="@id/llRating"
+            android:text="10 nights for two/all inclusive"
+            android:paddingStart="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_small"
+            android:paddingTop="@dimen/margin_small"/>
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvPriceWithDollar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/ivPopularTour"
+            android:layout_below="@id/tvPackage"
+            android:text="$250.00"
+            android:paddingStart="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold"
+            android:paddingTop="@dimen/margin_small"/>
+
+        <LinearLayout
+            android:id="@+id/llRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_medium_2"
+            android:background="#078D0C"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingBottom="@dimen/margin_medium"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_small"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            >
+
+            <org.mmtextview.components.MMTextView
+                android:id="@+id/tvAverageRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.3"
+                android:textColor="@android:color/white"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_star_black_24dp"
+                android:tint="@android:color/white"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>
